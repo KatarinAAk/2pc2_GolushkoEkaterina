@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace pz_8
 {
     class Program
@@ -35,8 +35,6 @@ namespace pz_8
             {
                 Console.WriteLine($"Число {keyValue.Key} повторяется {keyValue.Value} раз(-а)");
             }
-            using System;
-            using System.Collections.Generic;
         }
     }
 }
