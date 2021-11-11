@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace pz_10
 {
@@ -7,68 +6,89 @@ namespace pz_10
     {
         static void Main(string[] args)
         {
-            Random rd = new Random();
-            //Пункт 1
-            int[][] list = new int[10][];//Создаём массив
-            //Заполняем массив
-            for (int i = 0; i < 10; i++)
+            Random rand = new Random();
+
+            float[][] arr = new float[10][];
+
+            arr[0] = new float[rand.Next(8, 21)];
+            arr[1] = new float[rand.Next(8, 21)];
+            arr[2] = new float[rand.Next(8, 21)];
+            arr[3] = new float[rand.Next(8, 21)];
+            arr[4] = new float[rand.Next(8, 21)];
+            arr[5] = new float[rand.Next(8, 21)];
+            arr[6] = new float[rand.Next(8, 21)];
+            arr[7] = new float[rand.Next(8, 21)];
+            arr[8] = new float[rand.Next(8, 21)];
+            arr[9] = new float[rand.Next(8, 21)];
+
+
+            for (int y = 0; y < arr.Length; y++)
             {
-                list[i] = new int[rd.Next(8, 20)];
-                for (int y = 0; y < list[i].Length; y++)
+                for (int x = 0; x < arr[y].Length; x++)
                 {
-                    list[i][y] = rd.Next(0, 100);
+                    arr[y][x] = Convert.ToChar(rand.Next(0, 21));
                 }
             }
-            //Пункт 2
-            //Выводим массив
-            Console.WriteLine("Массив:");
-            foreach (int[] i in list)
-            {
-                foreach (int y in i) Console.Write(y + "\t");
-                Console.WriteLine();
-            }
-            //Пункт 3
-            //Находим последние значения
-            int[] values = new int[10];
-            for (int i = 0; i < 10; i++)
-            {
-                values[i] = list[i][list[i].Length - 1];
-            }
-            //Выводим массив
-            Console.WriteLine("Последние значения:");
-            foreach (int i in values)
-            {
-                Console.Write(i + "\t");
+            Console.WriteLine("Ступенчатый массив");
 
-            }
-            Console.WriteLine();
-            //Пункт 4
-            //Находим максимальные значения
-            for (int i = 0; i < 10; i++)
+            foreach (float[] row in arr)
             {
-                values[i] = list[i].Max();
-            }
-            //Выводим значения
-            Console.WriteLine("Максимальные значения:");
-            foreach (int i in values)
-            {
-                Console.Write(i + "\t");
-            }
-            Console.WriteLine();
-            //Пункт 5
-            //Меняем местами значения
-            for (int i = 0; i < 10; i++)
-            {
-                int position = Array.IndexOf(list[i], values[i]);
-                list[i][position] = list[i][0];
-                list[i][0] = values[i];
-            }
-            Console.WriteLine("Массив:");
-            foreach (int[] i in list)
-            {
-                foreach (int y in i) Console.Write(y + "\t");
+                foreach (float symbol in row)
+                {
+                    Console.Write($"{symbol} ");
+                }
                 Console.WriteLine();
             }
+
+            float[] lastVals = new float[arr.Length];
+
+            for (int i = 0; i < lastVals.Length; i++)
+            {
+                lastVals[i] = arr[i][^1];
+            }
+
+            Console.Write("\nПоследние элементы каждой строки: ");
+            foreach (float ch in lastVals)
+            {
+                Console.Write($"{ch} ");
+            }
+
+            float[] maxVals = new float[arr.Length];
+            for (int i = 0; i < maxVals.Length; i++)
+            {
+                float maxChar = arr[i][0];
+                for (int k = 0; k < arr[i].Length; k++)
+                {
+                    if (arr[i][k] > maxChar)
+                        maxChar = arr[i][k];
+                }
+                maxVals[i] = maxChar;
+            }
+
+            Console.Write("\nСтаршие элементы обновленного массива : ");
+            foreach (float ch in maxVals)
+            {
+                Console.Write($"{ch} ");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i][Array.IndexOf(arr[i], maxVals[i])] = arr[i][0];
+                arr[i][0] = maxVals[i];
+            }
+
+            Console.WriteLine("\nОбновлённый массив");
+            foreach (float[] row in arr)
+            {
+                foreach (float ch in row)
+                {
+                    Console.Write($"{ch} ");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
         }
     }
 }
