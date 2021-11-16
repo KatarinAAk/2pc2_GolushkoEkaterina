@@ -21,25 +21,25 @@ namespace пз13
             Enum.TryParse(цветочек, out katarin);
             switch (katarin)
             {
-                case (Kate)1:
-                    Console.WriteLine("Очень плохо!");
+                case Kate.Verybad:
+                    Console.WriteLine("1");
                     break;
-                case (Kate)2:
-                    Console.WriteLine("Плохо!");
+                case Kate.Bad:
+                    Console.WriteLine("2");
                     break;
-                case (Kate)3:
-                    Console.WriteLine("Удовлетворительно");
+                case Kate.Normal:
+                    Console.WriteLine("3");
                     break;
-                case (Kate)4:
-                    Console.WriteLine("Хорошо!");
+                case Kate.Good:
+                    Console.WriteLine("4");
                     break;
-                case (Kate)5:
-                    Console.WriteLine("Отлично");
+                case Kate.VeryGood:
+                    Console.WriteLine("5");
                     break;
             }
         }
     }
-}l
+}
 
             
             
