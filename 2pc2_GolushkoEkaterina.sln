@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pz_10", "pz_10\pz_10.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "пз11голушко2пк2", "пз11голушко2пк2\пз11голушко2пк2.csproj", "{9FDD1CDD-13DE-4DB0-839D-807DC09F9231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pz12golushko2pk2", "pz12golushko2pk2\pz12golushko2pk2.csproj", "{D6B49C07-031D-4DDA-B012-4EAA932883A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pz12golushko2pk2", "pz12golushko2pk2\pz12golushko2pk2.csproj", "{D6B49C07-031D-4DDA-B012-4EAA932883A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "пз13", "пз13\пз13.csproj", "{AF0AFF78-3B5F-44C8-A2F4-0F186F3D08E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D6B49C07-031D-4DDA-B012-4EAA932883A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6B49C07-031D-4DDA-B012-4EAA932883A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6B49C07-031D-4DDA-B012-4EAA932883A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0AFF78-3B5F-44C8-A2F4-0F186F3D08E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0AFF78-3B5F-44C8-A2F4-0F186F3D08E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0AFF78-3B5F-44C8-A2F4-0F186F3D08E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0AFF78-3B5F-44C8-A2F4-0F186F3D08E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
