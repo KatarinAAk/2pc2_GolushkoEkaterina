@@ -6,11 +6,12 @@ namespace pz__2._3
 {
     class Package
     {
-        public string nameDest;
-        public string nameSor;
-        public string addres;
-        public string type;
-        public DateTime receiptDate;
+        private string nameDest;
+        private string nameSor;
+        private string addres;
+        private string type;
+        private string receiptDate;
+        private Random rnd = new Random()
 
         public Package(string _nameDest, string _nameSor, string _addres, string _type)
         {
@@ -18,7 +19,7 @@ namespace pz__2._3
             nameSor= _nameSor;
             addres = _addres;
             type = _type;
-            receiptDate = new DateTime(2004,02,05,12,55,54);
+            receiptDate = DateTime.Now.ToString();
         }
 
         public void GetPackageInfo()
